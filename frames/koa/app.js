@@ -37,7 +37,6 @@ app.use(function*(next) {
 
 	if (pathName !== config.LOGIN_URL && config.NEED_AUTH_URL.indexOf(pathName) !== -1) {
 		if (!this.session.user || !this.session.user.id) {
-			console.log('x');
 			this.redirect(config.LOGIN_URL);
 		}
 	}
@@ -45,8 +44,7 @@ app.use(function*(next) {
 	yield next;
 
 	var ms = new Date - start;
-	var workId = require('cluster').worker ? require('cluster').worker.id : -1;
-	logger.access.info("%s %s - %sms - workId -> %d", this.method, this.url, ms, workId);
+	logger.access.info("%s %s - %sms", this.method, this.url, ms);
 });
 
 require('./routers')(app);
