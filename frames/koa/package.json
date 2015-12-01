@@ -1,0 +1,41 @@
+{
+  "name": "koa",
+  "version": "1.0.0",
+  "description": "koa mysql redis",
+  "main": "app.js",
+  "dependencies": {
+    "bluebird": "^2.9.27",
+    "co-body": "^2.0.0",
+    "co": "^4.5.4",
+    "co-views": "^1.0.0",
+    "koa": "^0.21.0",
+    "ejs": "^2.3.1",
+    "koa-generic-session": "^1.9.0",
+    "koa-redis": "^1.0.0",
+    "koa-router": "^5.1.2",
+    "koa-bodyparser": "^2.0.0",
+    "koa-static": "^1.4.9",
+    "log4js": "^0.6.26",
+    "moment": "^2.10.3",
+    "mysql": "^2.7.0",
+    "sequelize": "^3.2.0",
+    "path": "^0.11.14",
+    "redis": "^0.12.1",
+    "underscore": "^1.8.3",
+    "request": "^2.57.0",
+    "koa-json": "^1.1.1",
+    "ejs-locals": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node cluster"
+  },
+  "keywords": [
+    "koa",
+    "mysql",
+    "redis",
+    "demo"
+  ],
+  "author": "simple0812@sina.cn",
+  "license": "ISC"
+}

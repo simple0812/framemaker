@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+.idea
+*.DS_Store
+logs/*
+start.bat
+public/download/*
+npm-debug.log
