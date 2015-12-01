@@ -28,7 +28,6 @@ program
 
 
 if (program.express) {
-    console.log(process.PWD, __dirname)
     var currDir = process.cwd();
 
     fse.copy(__dirname + '/frames/express', currDir, function(err) {
@@ -39,4 +38,9 @@ if (program.express) {
 
 if (program.koa) {
     var currDir = process.cwd();
+
+    fse.copy(__dirname + '/frames/koa', currDir, function(err) {
+        if(err) return console.error(err)
+        console.log('ok')
+    })
 }
