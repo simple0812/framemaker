@@ -4,7 +4,7 @@
   "description": "grunt angular mysql express qjs ",
   "main": "app.js",
   "dependencies": {
-    "aysnc": "^1.4.4",
+    "async": "^1.5.0",
     "bluebird": "^3.0.5",
     "body-parser": "^1.14.1",
     "cookie-parser": "^1.4.0",
