@@ -1,0 +1,37 @@
+{
+  "name": "information",
+  "version": "1.0.0",
+  "description": "grunt angular mysql express qjs ",
+  "main": "app.js",
+  "dependencies": {
+    "aysnc": "^1.4.4",
+    "bluebird": "^3.0.5",
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "cookie-session": "^1.2.0",
+    "debug": "^2.2.0",
+    "ejs": "^1.0.0",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "express-partials": "^0.3.0",
+    "log4js": "^0.6.29",
+    "method-override": "^1.0.2",
+    "moment": "^2.10.6",
+    "morgan": "^1.6.1",
+    "mysql": "^2.9.0",
+    "request": "^2.67.0",
+    "sequelize": "^3.14.2",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "keywords": [
+    "grunt",
+    "angular",
+    "mysql",
+    "express"
+  ],
+  "author": "simple0812@sina.cn",
+  "license": "ISC"
+}
