@@ -42,3 +42,4 @@ exports.getByName = function(name) {
     return Promise.resolve(doc);
   });
 };
+

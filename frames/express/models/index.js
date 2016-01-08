@@ -1,10 +1,10 @@
-var WorkOvertime = require('./work');
+var Article = require('./article');
 var User = require('./user');
 
 var db = require('./db');
 
-User.hasMany(WorkOvertime, {foreignKey : 'uid'});
-WorkOvertime.belongsTo(User, {foreignKey : 'uid'});
+User.hasMany(Article, {foreignKey : 'uid'});
+Article.belongsTo(User, {foreignKey : 'uid'});
 
 db.sync().then(function() {
     console.log('数据库同步成功')
@@ -12,5 +12,5 @@ db.sync().then(function() {
     console.log(err, '数据库同步失败')
 })
 
-exports.WorkOvertime = WorkOvertime;
+exports.Article = Article;
 exports.User = User;

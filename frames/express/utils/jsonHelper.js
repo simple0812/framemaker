@@ -1,6 +1,6 @@
 module.exports = function() {
   function Constructor(status, message, result) {
-    this.status = status;
+    this.code = status;
     this.message = message;
     this.result = result;
   }
@@ -16,8 +16,7 @@ module.exports = function() {
 
   function pageSuccess(doc, allCount) {
     var json = new Constructor('success', '', doc);
-    json.count = doc.length;
-    json.allCount = allCount;
+    json.total = allCount;
     return json;
   }
 

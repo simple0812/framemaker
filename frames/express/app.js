@@ -2,22 +2,13 @@ express = require('express');
 app = express();
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
-var partials = require('express-partials');
+var engine = require('ejs-locals');
 var config = require('./config');
 var logger = require('./utils/logger');
 
-app.set('views', __dirname + "/views");
+app.set('views', "" + __dirname + "/views");
 app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
-
-ejs.open = '{{';
-ejs.close = '}}';
-app.set('view options', {
-	defaultLayout: 'layout'
-});
-
-partials.register('.html',require('ejs').render);
-app.use(partials());
+app.engine('html', engine);
 
 app.use(bodyParser.urlencoded({
 	extended: false

@@ -2,7 +2,7 @@ var db = require('./db');
 var Sequelize = require('sequelize');
 var common = require('../utils/common');
 
-var WorkOvertime = db.define('workOvertime', {
+var Article = db.define('article', {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
@@ -12,15 +12,12 @@ var WorkOvertime = db.define('workOvertime', {
   uid: {
     type: Sequelize.INTEGER,
     defaultValue: 0
-
   },
-  userName: {
-    type: Sequelize.STRING(50),
-    field: 'user_name',
+  title: {
+    type: Sequelize.STRING(100),
     defaultValue: ''
-
   },
-  remark: {
+  content: {
     type: Sequelize.STRING(2000),
     defaultValue: ''
   },
@@ -37,12 +34,12 @@ var WorkOvertime = db.define('workOvertime', {
   timestamps: false,
   freezeTableName: true,
   underscored: true,
-  tableName: 'work_overtime'
+  tableName: 'article'
 });
 
-WorkOvertime.hook('beforeCreate', function(model, options, fn) {
+Article.hook('beforeCreate', function(model, options, fn) {
   model.createdAt || (model.createdAt = common.getTime());
   fn(null, model);
 });
 
-module.exports = WorkOvertime;
+module.exports = Article;

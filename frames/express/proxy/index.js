@@ -1,2 +1,2 @@
-exports.WorkOvertime = require('./work');
+exports.Article = require('./article');
 exports.User = require('./user');
